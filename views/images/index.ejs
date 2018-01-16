@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+    <header class = "jumbotron">
+        <div class = "container">
+             <h1>Welcome to Duke Gallery</h1>
+             <p>Photo adventures in Duke. Have an idea for "photo a day"?</p>
+             <p>
+                <a class="btn btn-primary btn-large" href="/gallery/new">Add New Photo</a>
+             </p>
+         </div>
+    </header>
+    <div class = "row text-center" style = "display:flex; flex-wrap:wrap;">
+        <% gallery.forEach(function(photo){ %>
+            <div class = "col-md-3 col-sm-6">
+                <div class = "thumbnail">
+                    <img src="<%= photo.image %>">
+                
+                <div class = "caption">
+                    <h4><%= photo.name %></h4>
+                </div>
+                 <p>
+                     <a href="/gallery/<%= photo._id %>" class="btn btn-primary">More Info</a>
+                 </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+<% include ../partials/footer %>
+
