@@ -8,16 +8,16 @@
         <link rel="stylesheet" href="/stylesheets/main.css">
         <style>
           main{
-			width: 100%;
+			width: 90%;
 			margin:50px auto;
 			
 			-moz-column-width: 220px;
 			-webkit-column-width: 220px;
 			column-width: 220px;
 			
-			-moz-column-count: 4;
-			-webkit-column-count: 4;
-			column-count: 4;
+			-moz-column-count: 3;
+			-webkit-column-count: 3;
+			column-count: 3;
 			
 			-moz-column-gap: 20px;
 			-webkit-column-gap: 20px;
@@ -44,11 +44,12 @@
 		}
 		
 		main:hover a[title]:not(:hover){
-			opacity: 1.0;
+			opacity: .6;
 		}
 		
 		a[title]:hover{
 			box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .20);
+			
 		}  
         </style>
     </head>
@@ -119,15 +120,10 @@
             <% gallery.forEach(function(photo){ %>
                     <a href="/gallery/<%= photo._id %>" title="<%= photo.name %>">
             			<article>
-            				<p><%= photo.description %></p>
+            				<p>photo.description</p>
             				<figure>
             					<img src="<%= photo.image %>">
-            					
-            					<div class = "row text-center">
-                                    <div class = "caption">
-                                        <h5><%= photo.name %></h5>
-                                    </div>
-                                </div>
+            					<figcaption><%= photo.name %></figcaption>
             				</figure>
             			</article>
 		            </a>
@@ -153,4 +149,3 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
-
