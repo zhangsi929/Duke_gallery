@@ -106,14 +106,24 @@
         <!--, style="margin: 100px auto;"-->
         <div class="container">
         <!----------------------------------------    -->
-        <header class = "jumbotron">
-            <div class = "container">
-                 <h1>Welcome to Duke Gallery</h1>
+        <header class = "jumbotron" id = "video-container">
+            <!--<div class = "container">-->
+
+                    
+                 <!--<h1>Welcome to Duke Gallery</h1>-->
+                 <!--<p>Photo adventures in Duke. Have an idea for "photo a day"?</p>-->
+                 <!--<p>-->
+                 <!--   <a class="btn btn-primary btn-large" href="/gallery/new">Add New Photo</a>-->
+                 <!--</p>-->
+
+                 <div class="container1">
+                    <h1>Welcome to Duke Gallery</h1>
                  <p>Photo adventures in Duke. Have an idea for "photo a day"?</p>
                  <p>
                     <a class="btn btn-primary btn-large" href="/gallery/new">Add New Photo</a>
                  </p>
-             </div>
+                 </div>
+             <!--</div>-->
         </header>
         <main>
             <% gallery.forEach(function(photo){ %>
@@ -135,14 +145,19 @@
         </main>
 
         
+        <header class = "jumbotron1" id = "video-container">
+            <!--<div class = "container">-->
+                <video id = "video-background" loop = "true" autoplay = "true" muted = "true" preload = "true">
+                    <source src = "/media/Duke.mp4" type = "video/mp4">
+                </video>
         
+        </header>
+        <footer class="footer">
+                <p class="text-muted">&copy; DukeGallery 2018 | <a href="/gallery">Home</a> | <a href="https://www.linkedin.com/in/si-zhang/">About me</a></p>
+        </footer>
         <!------------------------------------------>
         </div><!-- /.container -->
-        <footer class="footer">
-              <div class="container">
-                <p class="text-muted">&copy; DukeGallery 2018 | <a href="/gallery">Home</a> | <a href="https://www.linkedin.com/in/si-zhang/">About me</a></p>
-              </div>
-        </footer>
+
     <!-- jQuery CDN -->
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
