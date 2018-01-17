@@ -25,7 +25,10 @@
   position: relative;
     overflow: hidden;
     /*height: 200px;*/
- 
+ /*background-image: url("http://nasher.duke.edu/wp-content/themes/nasher/images/background.jpg");*/
+ background-image: url("/image/haha.jpg");
+ background-size: cover;
+ color: #000000;
   /* Tried setting the height. Didnt work either */
   /* height: 200px; */
 }
