@@ -68,9 +68,11 @@ router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, re
     }
     geocoder.geocode(req.body.location, function (err, data) {
         if (err){
+            req.flash('error', err.message);
             return res.redirect('back');
         }
         if (data.results[0] === undefined) {
+            req.flash('error', "Location invalid");
             return res.redirect('back');
         }
         var lat = data.results[0].geometry.location.lat;
@@ -136,6 +138,13 @@ router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req, res){
 // });
 router.put("/:id", function(req, res){
   geocoder.geocode(req.body.location, function (err, data) {
+    if (err){
+        return res.redirect('back');
+    }
+    if (data.results[0] === undefined) {
+        req.flash('error', "Location invalid");
+        return res.redirect('back');
+    }
     var lat = data.results[0].geometry.location.lat;
     var lng = data.results[0].geometry.location.lng;
     var location = data.results[0].formatted_address;
