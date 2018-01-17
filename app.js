@@ -19,7 +19,7 @@ var commentRoutes    = require("./routes/comments"),
     
 //mongoose.connect("mongodb://localhost/yelp_camp_v6");
 mongoose.connect("mongodb://Si:zhangsi110@ds257627.mlab.com:57627/dukegallery");
-//mongodb://Si:zhangsi110@ds257627.mlab.com:57627/dukegallery
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -51,5 +51,5 @@ app.use("/gallery", galleryRoutes);
 app.use("/gallery/:id/comments", commentRoutes);
 
 app.listen(process.env.PORT, process.env.IP, function(){
-   console.log("The YelpCamp Server Has Started!");
+   console.log("The DukeGallery Server Has Started!");
 });

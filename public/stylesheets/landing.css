@@ -36,22 +36,22 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+  background-image: url(http://ephesuslighting.com/wp-content/uploads/2015/03/112914_boston_college088.jpg) 
 }
 .slideshow li:nth-child(2) { 
-  background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+  background-image: url(https://cdn.vox-cdn.com/uploads/chorus_asset/file/7905339/WU_Exterior_Dusk_View_of_South_Facade_from_the_Plaza_Bridge_James_Ewing.jpg);
   animation-delay: 10s; 
 }
 .slideshow li:nth-child(3) { 
-  background-image: url(http://i.imgur.com/emvhOnb.jpg);
+  background-image: url(https://i.ytimg.com/vi/RVcXOtIo7Cc/maxresdefault.jpg);
   animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  background-image: url(https://timeincsecureuds-a.akamaihd.net/rtmp_uds/2157889318001/2157889318001_4157456797001_3-Keys-from-Duke-s-national-championship-win.jpg);
   animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
-  background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  background-image: url(https://abm-website-assets.s3.amazonaws.com/rdmag.com/s3fs-public/embedded_image/2017/10/clock.jpg);
   animation-delay: 40s; 
 }
 @keyframes imageAnimation { 
