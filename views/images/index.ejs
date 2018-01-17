@@ -12,16 +12,22 @@
     <div class = "row text-center" style = "display:flex; flex-wrap:wrap;">
         <% gallery.forEach(function(photo){ %>
             <div class = "col-md-3 col-sm-6">
-                <div class = "thumbnail">
+                <!--<div class = "thumbnail">-->
+                <!--    <img src="<%= photo.image %>">-->
+                <!--    <div class = "caption">-->
+                <!--        <h4><%= photo.name %></h4>-->
+                <!--    </div>-->
+                <!--     <p>-->
+                <!--         <a href="/gallery/<%= photo._id %>" class="btn btn-primary">More Info</a>-->
+                <!--     </p>-->
+                <!--</div>-->
+                <a href = "/gallery/<%= photo._id %>" class = "thumbnail">
                     <img src="<%= photo.image %>">
+                    <div class = "caption">
+                        <h5><%= photo.name %></h5>
+                    </div>
+                </a>
                 
-                <div class = "caption">
-                    <h4><%= photo.name %></h4>
-                </div>
-                 <p>
-                     <a href="/gallery/<%= photo._id %>" class="btn btn-primary">More Info</a>
-                 </p>
-                </div>
             </div>
         <% }); %>
     </div>
