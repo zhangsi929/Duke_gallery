@@ -1,8 +1,3 @@
-* add landing page
-* add photo page that lists all photos
-Each phot has 
-*name 
-*Imagetou
 # Duke Gallery Development Process
 A full-stack Node.js project from my web dev course with RESTful routing
 
