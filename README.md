@@ -1,5 +1,5 @@
 # Duke Gallery Development Process
-A full-stack Node.js project from my web dev course with RESTful routing
+A full-stack Node.js side project from my own interest with RESTful routing
 
 
 ## Initial Setup
