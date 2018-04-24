@@ -29,7 +29,7 @@ function escapeRegex(text) {
     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 };
 
-//gallery route
+// Gallery route
 router.get("/", function(req, res){
     if (req.query.search){
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
@@ -97,7 +97,8 @@ router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, re
         });
     });
 });
-//CREATE - add new campground to DB
+
+// CREATE - add new campground to DB
 router.get("/new", middleware.isLoggedIn, function(req, res){
    res.render("images/new"); 
 });
