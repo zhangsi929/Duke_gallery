@@ -42,7 +42,6 @@ router.get("/", function(req, res){
          }
       });
     } else {
-        //debug
         // Get all from DB
         Image.find({}, function(err, allImages){
            if(err){
