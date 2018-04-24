@@ -17,7 +17,6 @@ var imageFilter = function (req, file, cb) {
     cb(null, true);
 };
 var upload = multer({ storage: storage, fileFilter: imageFilter})
-
 var cloudinary = require('cloudinary');
 cloudinary.config({ 
   cloud_name: 'zhangsi929', 
@@ -42,7 +41,6 @@ router.get("/", function(req, res){
             res.render("images/index",{gallery:allImages, page: 'campgrounds', currentUser: req.user});
          }
       });
-
     } else {
         //debug
         // Get all from DB

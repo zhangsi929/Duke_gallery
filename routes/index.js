@@ -6,12 +6,9 @@ router.get("/", function(req, res){
 });
 var passport = require("passport");
 var User = require("../models/user");
-
-
 //  ===========
 // AUTH ROUTES
 //  ===========
-
 // show register form
 router.get("/register", function(req, res){
    //res.render("register"); 
@@ -31,13 +28,12 @@ router.post("/register", function(req, res){
         }
         passport.authenticate("local")(req, res, function(){
             req.flash("success", "Welcome to DukeGallery " + user.username);
-          res.redirect("/gallery"); 
+            res.redirect("/gallery"); 
         });
     });
 });
 // show login form
 router.get("/login", function(req, res){
-   //res.render("login"); 
    res.render("login", {page: 'login'}); 
 });
 // handling login logic
@@ -53,6 +49,4 @@ router.get("/logout", function(req, res){
    req.flash("success", "Logged you out!");
    res.redirect("/gallery");
 });
-
-
 module.exports = router;

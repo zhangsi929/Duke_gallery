@@ -1,5 +1,5 @@
 # Duke Gallery Development Process
-A full-stack Node.js side project from my own interest with RESTful routing
+A full-stack Node.js side project from with RESTful routing
 
 
 ## Initial Setup
@@ -12,7 +12,7 @@ Each Campground has:
 
 ## Layout and Basic Styling
 * Create header and footer partials
-* Add in Bootstrap
+* Add Bootstrap
 
 ## Creating New Picture
 * Setup new picture POST route
@@ -81,7 +81,7 @@ Each Campground has:
 ## Authentication Pt. 4 - Logout/Navbar
 * Add logout route
 * Prevent user from adding a comment if not signed in
-* Add links to navbar
+* Add in links to navbar
 
 ## Authentication Pt. 5 - Show/Hide Links
 * Show/hide auth links in navbar 
