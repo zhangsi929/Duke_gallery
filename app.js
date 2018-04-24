@@ -16,10 +16,9 @@ var flash       = require("connect-flash");
 var commentRoutes    = require("./routes/comments"),
     galleryRoutes = require("./routes/gallery"),
     indexRoutes      = require("./routes/index")
-    
-//mongoose.connect("mongodb://localhost/yelp_camp_v6");
-mongoose.connect("mongodb://Si:zhangsi110@ds257627.mlab.com:57627/dukegallery");
 
+//mongoose.connect("mongodb://localhost/dukegallery");
+mongoose.connect("mongodb://Si:zhangsi110@ds257627.mlab.com:57627/dukegallery");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -27,6 +26,7 @@ app.use(methodOverride("_method"));
 app.use(flash());
 //seedDB();
 app.locals.moment = require('moment');
+
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
     secret: "Once again Rusty wins cutest dog!",
@@ -46,6 +46,7 @@ app.use(function(req, res, next){
    next();
 });
 
+// ROUTES
 app.use("/", indexRoutes);
 app.use("/gallery", galleryRoutes);
 app.use("/gallery/:id/comments", commentRoutes);
